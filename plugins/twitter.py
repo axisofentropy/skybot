@@ -10,6 +10,7 @@ from time import strptime, strftime
 from util import hook
 
 import twitter
+assert hasattr(twitter, 'Api') # Make sure we have the right module loaded.
 
 def hasapikey(bot):
     api_key = bot.config.get("api_keys", {}).get("twitter", None)
